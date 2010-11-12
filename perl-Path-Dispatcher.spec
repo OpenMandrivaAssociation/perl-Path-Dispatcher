@@ -14,6 +14,8 @@ Source0:    http://www.cpan.org/modules/by-module/Path/%{upstream_name}-%{upstre
 BuildRequires: perl(Any::Moose)
 BuildRequires: perl(ExtUtils::MakeMaker)
 BuildRequires: perl(Test::Exception)
+BuildRequires: perl(Try::Tiny)
+
 BuildArch: noarch
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}
 
@@ -34,7 +36,6 @@ some sugar inspired by the Jifty::Dispatcher manpage.
 
 %build
 %{__perl} Makefile.PL INSTALLDIRS=vendor
-
 %make
 
 %check
